@@ -23,6 +23,9 @@
             align-items: center;
             padding: 20px 5%;
             background-color: #111;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         .logo {
             font-size: 22px;
@@ -38,11 +41,15 @@
             color: #fff;
             text-decoration: none;
             font-size: 16px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #20c997;
         }
 
-        /* Hero Section with Dark Background */
+        /* Hero Section */
         .hero {
-            height: 100vh;
+            height: 90vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1584467735811-0a4c2caa47d4?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
@@ -100,6 +107,65 @@
             background-color: #fff;
             color: #000;
         }
+
+        /* Products Section */
+        .products {
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .products h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .products p.section-desc {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 20px;
+            text-align: left;
+        }
+        .product-info h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+        .product-info p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -109,7 +175,7 @@
         <div class="logo">BV Mosquito Nets</div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -118,13 +184,62 @@
     <!-- Hero Section -->
     <section class="hero">
         <h3>Protect Your Family</h3>
-        <h1>High-Quality Mosquito Nets</h1>
-        <p>Keep your home safe, bug-free, and well-ventilated with our premium durable mosquito net solutions.</p>
+        <h1>High-Quality Printed Mosquito Nets</h1>
+        <p>Keep your home safe, bug-free, and stylish with our premium designer mosquito net solutions.</p>
         <div class="btn-container">
-            <a href="#" class="btn btn-primary">Order Now</a>
-            <a href="#" class="btn btn-secondary">Learn More</a>
+            <a href="#products" class="btn btn-primary">View Designs</a>
+            <a href="#" class="btn btn-secondary">Contact Us</a>
         </div>
     </section>
+
+    <!-- Products Section with Photos -->
+    <section class="products" id="products">
+        <h2>Our Exclusive Designs</h2>
+        <p class="section-desc">Choose from our wide variety of elegant printed and sliding mosquito nets.</p>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="90043.jpg" alt="Tulip Printed Mosquito Net">
+                <div class="product-info">
+                    <h4>Tulip Flower Design Net</h4>
+                    <p>Elegant pink tulip prints that add beauty and style to your home windows and doors.</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="90041.jpg" alt="Running Horses & Nature Net">
+                <div class="product-info">
+                    <h4>Scenic Landscape Net</h4>
+                    <p>Traditional mountain and running horses design for a vibrant look.</p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="90039.jpg" alt="Purple Floral Net">
+                <div class="product-info">
+                    <h4>Purple Floral Art Net</h4>
+                    <p>Rich purple flower patterns designed for modern interiors.</p>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="89995.jpg" alt="Golden Tree and Stones Net">
+                <div class="product-info">
+                    <h4>Golden Tree & Stones Net</h4>
+                    <p>Unique artistic golden tree style combined with smooth pebble prints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 BV Mosquito Nets. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
